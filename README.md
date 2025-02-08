@@ -1,42 +1,57 @@
-# `next` recipe
+# Form Builder with Puck
 
-The `next` recipe showcases one of the most powerful ways to implement Puck using to provide an authoring tool for any route in your Next app.
+A Next.js application that allows you to build forms using Puck's drag-and-drop interface.
 
-## Demonstrates
+## Prerequisites
 
-- Next.js App Router implementation
-- JSON database implementation with HTTP API
-- Catch-all routes to use puck for any route on the platform
-- Incremental static regeneration (ISR) for all Puck pages
+- Node.js 18+ 
+- npm
+- Git
+
+## Features
+
+- Create dynamic forms with multiple field types:
+  - Text input fields
+  - Radio button groups
+  - Buttons
+- Drag-and-drop interface for form building
+- Customizable field labels and options
+- Responsive design
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd <project-directory>
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Build the application:
+```bash
+npm run build
+```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application
+6. To edit forms, navigate to [http://localhost:3000/edit](http://localhost:3000/edit)
 
 ## Usage
 
-Run the generator and enter `next` when prompted
+1. Click "Edit" to enter the form builder interface
+2. Drag form components from the left sidebar
+3. Configure field properties:
+   - Choose field type (textbox, radio, button)
+   - Set field labels
+   - Add radio options for radio fields
+4. Preview your form in real-time
+5. Save changes when done
 
-```
-npx create-puck-app my-app
-```
-
-Start the server
-
-```
-yarn dev
-```
-
-Navigate to the homepage at https://localhost:3000. To edit the homepage, access the Puck editor at https://localhost:3000/edit.
-
-You can do this for any route on the application, **even if the page doesn't exist**. For example, visit https://localhost:3000/hello/world and you'll receive a 404. You can author and publish a page by visiting https://localhost:3000/hello/world/edit. After publishing, go back to the original URL to see your page.
-
-## Using this recipe
-
-To adopt this recipe you will need to:
-
-- **IMPORTANT** Add authentication to `/edit` routes. This can be done by modifying the example API routes in `/app/puck/api/route.ts` and server component in `/app/puck/[...puckPath]/page.tsx`. **If you don't do this, Puck will be completely public.**
-- Integrate your database into the API calls in `/app/puck/api/route.ts`
-- Implement a custom puck configuration in `puck.config.tsx`
-
-By default, this recipe will generate static pages by setting `dynamic` to [`force-static`](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic) in the `/app/[...puckPath]/page.tsx`. This will strip headers and cookies. If you need dynamic pages, you can delete this.
-
-## License
-
-MIT © [Measured Co.](https://github.com/measuredco)
