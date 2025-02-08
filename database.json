@@ -1,1 +1,1 @@
-{"/":{"content":[],"root":{"props":{"title":"Page title"}},"zones":{}}}
+{"/":{"content":[{"type":"Form","props":{"formFields":[{"fieldType":"textbox","fieldLabel":"Label","radioOptions":[{"label":"Option 1"},{"label":"Option 2"}]}],"id":"Form-565d17b2-e9e6-492c-a19d-bf8b6ae4b6d8"}}],"root":{"props":{"title":"Page title"}},"zones":{}}}
