@@ -42,7 +42,7 @@ export const config: Config<Props> = {
                     },
                   },
                   defaultItemProps: {
-                    label: "Option 1",
+                    label: "Option",
                   },
                 },
               } : {}),
